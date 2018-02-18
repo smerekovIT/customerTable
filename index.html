@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+	<link rel="stylesheet" href="jquery-ui.structure.min.css">
+	<link rel="stylesheet" href="style.css">
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+	<script src="jquery-ui.min.js"></script>
+	<script src="app.js"></script>
+</head>
+<body>
+	
+<table id="buyerTable">
+	<thead>
+			<tr>
+				<th data-type='string'>Менеджер</th>
+				<th data-type='string'>Имя</th>
+				<th data-type='string'>Фамилия</th>
+				<th data-type='string'>Дата регистрации</th>
+				<th data-type='number'>Сумма покупок</th>
+				<th data-type='number'>Число покупок</th>
+				<th>Заказать</th>
+				<th>Изменить</th>
+				<th>Удалить</th>
+			</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<td> <button id="actionForm">Добавить</button> </td>
+				</tr>
+			</tfoot>
+			<tbody id="tableBody">
+
+			</tbody>
+
+</table>
+
+<form action="" id="buyerRequestForm" class="hidden">
+		<input type="text" id="id-customer" class="hidden">
+		<input type="text" id="ordersCount" class="hidden">
+		<input type="text" id="moneySpent" class="hidden">
+	<input type="text" id="menedger"  class="customerRegistration">
+	<input type="text" id="name" class="customerRegistration">
+	<input type="text" id="surname" class="customerRegistration">
+	<button disabled="disabled" id="submitBtn">Отправить</button>
+</form>
+
+	<form action="" id="formOrder" title="Create new user">
+		<input type="number" id="newOrderCount" class="text ui-widget-content ui-corner-all">
+	</form>
+
+
+
+
+
+
+
+
+
+<script type='text/appTemplate' id='itemTemplate'>
+	<tr data-id='{{id}}'>
+				<td data-type="class-manager">{{manager}}</td>
+				<td data-type="class-name">{{name}}</td>
+				<td data-type="class-surname">{{surname}}</td>
+				<td data-type="class-createdAt">{{createdAt}}</td>
+				<td data-type="class-moneySpent">{{moneySpent}}</td>
+				<td data-type="class-ordersCount">{{ordersCount}}</td>
+				<td><button class='order-btn'>Заказать</button></td>
+				<td><button class='upgrade-btn'>Изменить</button></td>
+				<td><button class='delete-btn'>Удалить</button></td>
+	</tr>
+</script>
+</body>
+</html>
